@@ -15,7 +15,7 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/api/rsvps', rsvp_routes_1.default);
 // Serve the index.html file for the root path
 app.get('/', (req, res) => {
-    res.sendFile(path_1.default.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path_1.default.join(__dirname, './public', 'index.html'));
 });
 app.use(express_1.default.static(publicDirPath));
 const PORT = process.env.PORT || 5000;
