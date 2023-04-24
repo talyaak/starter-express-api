@@ -7,7 +7,6 @@ const connectionString = process.env.API_URL;
 exports.pool = new pg_1.Pool({
     connectionString: connectionString,
 });
-// export const pool = new Pool(config.db);
 exports.pool.on('connect', () => {
     console.log('Connected to the database');
 });
