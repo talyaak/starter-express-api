@@ -14,7 +14,7 @@ const index_1 = require("../database/index");
 const getRsvps = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const client = yield index_1.pool.connect();
-        const result = yield client.query('SELECT * FROM rsvps;');
+        const result = yield client.query('SELECT name, email FROM rsvps;');
         res.status(200).json(result.rows);
         client.release();
     }
